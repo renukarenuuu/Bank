@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<style>
+    img{
+        width:270px;
+        border-radius: 10px;
+        margin-top: 5px;
+    }
+    body{
+        margin: 15% ;
+        background-color: antiquewhite;
+    }
+    h2{
+        color: red;
+        padding-left: 20%;
+        
+    }
+    h1{
+        font-family: 'Times New Roman', Times, serif;
+        color: blue;
+        padding-left: 25%;
+    }
+    hr{
+        border: 1px solid black;
+    }
+    div{
+        background-color: palevioletred;
+        border-radius: 10px;
+        padding-left: 10px;
+       
+    }
+</style>
+<body>
+    <h1>WELCOME TO RCB BANK</h1>
+    <hr>
+    <h2>PLEASE SELECT YOUR TRANSACTION</h2>
+    <div>
+        
+        <a href="{% url 'register' %}"><img src="{% static 'images/acc create.webp' %}" alt=""></a>
+        <a href="{% url 'pin' %}"><img src="{% static 'images/pin.webp' %}" alt=""></a>
+        <a href="{% url 'checkbalance' %}"><img src="{% static 'images/check bal.webp' %}" alt=""></a>
+        <a href="{% url 'deposit' %}"><img src="{% static 'images/deposit.webp' %}" alt=""></a>
+        <a href="{% url 'withdraw' %}"><img src="{% static 'images/with draw.webp' %}" alt=""></a>
+        <a href="{% url 'acc_transfer' %}"><img src="{% static 'images/acc to acc.webp' %}" alt=""></a>
+    </div>
+</body>
+</html>
